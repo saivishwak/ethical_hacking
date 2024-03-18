@@ -10,7 +10,7 @@ in below command check for ether field data which is the MAC address.
 ifconfig
 ``` 
 
-![](./images/mac_address_01.png)
+![mac_address_01](images/mac_address_01.png)
 
 Each device will have a unique MAC address so to identify the devices in network. It is good to change the MAC address to be anonymous.
 
