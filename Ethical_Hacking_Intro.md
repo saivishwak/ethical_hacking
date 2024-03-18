@@ -213,6 +213,7 @@ nmap 10.0.2.0/24
 ```
 
 ARP Protocol
+
 ![](./Images/network_arp_theory.jpg)
 
 ##### Manual ARP Poison
