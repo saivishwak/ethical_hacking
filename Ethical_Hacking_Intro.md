@@ -10,7 +10,7 @@ in below command check for ether field data which is the MAC address.
 ifconfig
 ``` 
 
-![mac_address_01](images/mac_address_01.png)
+![mac_address_01](Images/mac_address_01.png)
 
 Each device will have a unique MAC address so to identify the devices in network. It is good to change the MAC address to be anonymous.
 
@@ -172,7 +172,7 @@ aireplay-ng --deauth 10000 -a <MAC-of-router> -c <MAC-of_device> wlan0
 
 Below image shows that the WPA handshake is captured.
 
-![[./images/network_sniffing_3.png]]
+![](./Images/network_sniffing_3.png)
 
 **Why are we doing this?**
 Because we want to capture handshake of packets. When I deauthenticate a device, the device will auto retry to connect the router network so a handshake will be made.
@@ -213,7 +213,7 @@ nmap 10.0.2.0/24
 ```
 
 ARP Protocol
-![](./images/network_arp_theory.jpg)
+![](./Images/network_arp_theory.jpg)
 
 ##### Manual ARP Poison
 
@@ -245,7 +245,7 @@ To verify if this is working in the Windows machine run, verify this in the ARP 
 arp -a
 ```
 
-![](./images/network_arp_1.png)
+![](./Images/network_arp_1.png)
 
 Here if you notice, that 10.0.2.15 (the attacker machine IP) mac is used for the router as well (10.0.2.1).
 
@@ -268,31 +268,31 @@ To start the bettercap tool
 sudo bettercap -iface eth0
 ```
 
-![](./images/bettercap_1.png)
+![](./Images/bettercap_1.png)
 
 Use help command in bettercap to see the modules and more info on modules
 
-![](./images/bettercap_2.png)
+![](./Images/bettercap_2.png)
 
-![](./images/bettercap_3.png)
+![](./Images/bettercap_3.png)
 
 #### ARP Attack using Bettercap
 
 Turn on the net.probe using ```net.probe on``` and then set the parameters. Full duplex will attack both the gateway and target. (this is needed in MIM attack). Internal is for local network devices.
 
-![](./images/bettercap_4.png)
+![](./Images/bettercap_4.png)
 
 Now to check if this worked, in Windows check the ARP table using `arp -a` in command prompt and notice that the router and attacker MAC will be the same.
 
 Sniffing packets on the network
 
-![](./images/bettercap_5.png)
+![](./Images/bettercap_5.png)
 
 In your victim machine (here the Windows VM) access any HTTP website and try out with login and you will see that the the sniffer will capture the packets
 
-![](./images/bettercap_6.png)
+![](./Images/bettercap_6.png)
 
 
 #### Hacker's Methodology
 
-![](./images/hackers_methodology.jpg)
+![](./Images/hackers_methodology.jpg)
